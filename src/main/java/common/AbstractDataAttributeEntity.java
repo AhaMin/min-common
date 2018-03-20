@@ -1,5 +1,6 @@
 package common;
 
+import codec.JSONCodec;
 import com.google.common.reflect.TypeToken;
 import org.apache.commons.lang3.StringUtils;
 
