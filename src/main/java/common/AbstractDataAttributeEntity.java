@@ -14,14 +14,14 @@ import java.util.stream.Collectors;
  */
 public abstract class AbstractDataAttributeEntity {
 
+
     private static final TypeToken<Long> TYPE_TOKEN_LONG = TypeToken.of(Long.class);
 
     private static final TypeToken<Float> TYPE_TOKEN_FLOAT = TypeToken.of(Float.class);
 
     private static final TypeToken<List<Long>> TYPE_TOKEN_LONG_LIST = new TypeToken<List<Long>>() {
 
-        //TODO
-        private static final long serialVersionUID = 1471039654610180699L;
+        private static final long serialVersionUID = 7006639868361178006L;
     };
 
     private transient volatile Map<String, Object> dataMap;
