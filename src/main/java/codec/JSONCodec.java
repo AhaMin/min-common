@@ -12,9 +12,11 @@ import java.lang.reflect.Type;
  * created by ewang on 2018/3/20.
  */
 public class JSONCodec {
-    static ObjectMapper mapper=null;
+    static ObjectMapper mapper = null;
+
     static {
-        mapper=new ObjectMapper();
+        mapper = new ObjectMapper();
+        //禁用未知属性打断反序列化功能
         mapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
         mapper.enable(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY);
     }
