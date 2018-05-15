@@ -57,7 +57,7 @@ public abstract class AbstractDataAttributeEntity {
     public <T> DataAttribute<T> getDataAttr(DataAttributeKey<T> key) {
         Object rawValue = getDataMap().get(key.getName());
         if (rawValue != null) {
-            // patch: jackons把未超过int范围的long都转换成int
+            // patch: jackson把未超过int范围的long都转换成int
             if (key.getTypeToken().equals(TYPE_TOKEN_LONG)) {
                 return new DataAttribute<T>(key, ((Number) rawValue).longValue());
             } else if (key.getTypeToken().equals(TYPE_TOKEN_FLOAT)) {
